@@ -60,27 +60,8 @@ header {
 nav ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-}
-
-@media (max-width: 950px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
-    padding: 1.25rem;
-  }
-  nav li {
-    padding: 1rem;
-    background-color: #f7f7f7;
-    border-radius: 0.25rem;
-  }
-}
-
-@media (max-width: 650px) {
-  header a {
-    font-size: 0.75rem;
-  }
 }
 
 /* 
@@ -115,7 +96,7 @@ Estilos referentes ao conteúdo principal
 }
 
 .introducao h1::before {
-  content: '';
+  content: "";
   display: block;
   width: 130px;
   height: 100px;
@@ -126,7 +107,22 @@ Estilos referentes ao conteúdo principal
   z-index: -1;
 }
 
+/* 
+Responsividade
+*/
+
 @media (max-width: 950px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 1.25rem;
+  }
+  nav li {
+    padding: 1rem;
+    background-color: #f7f7f7;
+    border-radius: 0.25rem;
+  }
   .introducao h1 {
     font-size: 3rem;
   }
@@ -136,10 +132,38 @@ Estilos referentes ao conteúdo principal
 }
 
 @media (max-width: 650px) {
+  header a {
+    font-size: 0.75rem;
+  }
+  .introducao {
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
   .introducao h1 {
     font-size: 2rem;
   }
+  .introducao h1::before {
+    content: none;
+  }
   .introducao p {
     font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    gap: 1rem;
+  }
+  nav ul {
+    gap: 0.5rem;
+  }
+  .introducao {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-top: 1rem;
+  }
+  .introducao img {
+    display: none;
   }
 }
