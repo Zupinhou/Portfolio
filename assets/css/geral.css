@@ -1,0 +1,16 @@
+body {
+  background-color: #FFFFFF;
+}
+
+h1 {
+  font-family: 'Space Grotesk';
+}
+
+.titulos {
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
